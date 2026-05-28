@@ -1,16 +1,14 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hy">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Միլենա & Միքայել</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Միլենա & Միքայել | Wedding Invitation</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
 
@@ -29,44 +27,40 @@
     }
 
     body{
-      font-family:'Montserrat', sans-serif;
-      background:#ffffff;
+      background:#f7f7f7;
       color:#111;
-      line-height:1.7;
+      font-family:'Montserrat', sans-serif;
+      overflow-x:hidden;
     }
 
     img{
       width:100%;
       display:block;
-    }
-
-    a{
-      text-decoration:none;
-    }
-
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
+      border-radius:18px;
     }
 
     section{
-      padding:80px 0;
+      padding:90px 7%;
+    }
+
+    h1,h2,h3{
+      font-family:'Cormorant Garamond', serif;
+      letter-spacing:1px;
     }
 
     .section-title{
+      font-size:52px;
       text-align:center;
-      font-size:38px;
-      margin-bottom:18px;
-      font-weight:700;
-      letter-spacing:1px;
+      margin-bottom:20px;
+      font-weight:600;
     }
 
     .section-subtitle{
       text-align:center;
-      color:#666;
-      margin-bottom:50px;
-      font-size:16px;
+      color:#555;
+      max-width:700px;
+      margin:0 auto 60px;
+      line-height:1.8;
     }
 
     /* =========================
@@ -75,63 +69,59 @@
 
     .hero{
       height:100vh;
-      position:relative;
-      background:url('https://cdn.shopify.com/s/files/1/0720/6482/7503/files/viber_2026-05-28_16-46-50-850.jpg?v=1779972471') center/cover no-repeat;
+      background:
+      linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+      url('https://cdn.shopify.com/s/files/1/0720/6482/7503/files/viber_2026-05-28_16-46-53-330.jpg?v=1779972470');
+      background-size:cover;
+      background-position:center;
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
       text-align:center;
-      overflow:hidden;
-    }
-
-    .hero::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.55);
+      color:white;
+      position:relative;
     }
 
     .hero-content{
-      position:relative;
-      z-index:2;
-      color:#fff;
-      width:90%;
       max-width:900px;
+      padding:20px;
     }
 
     .date{
-      font-size:22px;
-      letter-spacing:4px;
+      font-size:28px;
+      letter-spacing:8px;
       margin-bottom:20px;
       font-weight:300;
     }
 
     .hero h1{
-      font-size:70px;
-      font-weight:700;
+      font-size:90px;
+      font-weight:600;
       margin-bottom:20px;
     }
 
     .hero p{
-      font-size:20px;
-      margin-bottom:35px;
-      color:#ddd;
+      font-size:22px;
+      line-height:1.7;
+      margin-bottom:40px;
     }
 
     .btn{
       display:inline-block;
       padding:16px 40px;
-      background:#fff;
-      color:#111;
+      background:white;
+      color:black;
+      text-decoration:none;
       border-radius:50px;
+      transition:0.4s;
       font-weight:600;
-      transition:0.3s;
+      border:1px solid white;
     }
 
     .btn:hover{
-      transform:translateY(-4px);
-      background:#111;
-      color:#fff;
+      background:black;
+      color:white;
+      transform:translateY(-3px);
     }
 
     /* =========================
@@ -139,72 +129,65 @@
     ========================== */
 
     .countdown{
-      margin-top:40px;
+      background:black;
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .countdown h2{
+      font-size:48px;
+      margin-bottom:25px;
+    }
+
+    .count-boxes{
       display:flex;
       justify-content:center;
-      gap:20px;
+      gap:25px;
       flex-wrap:wrap;
     }
 
     .count-box{
-      width:120px;
-      height:120px;
-      border:1px solid rgba(255,255,255,0.3);
+      border:1px solid rgba(255,255,255,0.2);
+      padding:25px;
+      min-width:120px;
       border-radius:20px;
-      backdrop-filter:blur(6px);
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
+      backdrop-filter:blur(5px);
+      transition:0.4s;
     }
 
-    .count-box h2{
-      font-size:38px;
-      color:#fff;
+    .count-box:hover{
+      transform:translateY(-5px);
+      background:white;
+      color:black;
     }
 
     .count-box span{
-      font-size:14px;
-      color:#ddd;
-      letter-spacing:2px;
+      display:block;
+      font-size:40px;
+      font-weight:bold;
+      margin-bottom:10px;
     }
 
     /* =========================
        SAVE THE DATE
     ========================== */
 
-    .save-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-      align-items:center;
-    }
-
-    .save-images{
+    .gallery{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:15px;
+      gap:25px;
+      margin-top:50px;
     }
 
-    .save-images img{
-      height:350px;
+    .gallery img{
+      height:420px;
       object-fit:cover;
-      border-radius:20px;
-      transition:0.4s;
+      transition:0.5s;
     }
 
-    .save-images img:hover{
-      transform:scale(1.04);
-    }
-
-    .save-text h2{
-      font-size:55px;
-      margin-bottom:20px;
-    }
-
-    .save-text p{
-      color:#555;
-      font-size:17px;
+    .gallery img:hover{
+      transform:scale(1.03);
     }
 
     /* =========================
@@ -212,7 +195,7 @@
     ========================== */
 
     .message{
-      background:#f8f8f8;
+      background:white;
       text-align:center;
     }
 
@@ -221,59 +204,65 @@
       margin:auto;
     }
 
-    .message-box h2{
-      font-size:42px;
-      margin-bottom:30px;
-    }
-
     .message-box p{
-      font-size:19px;
-      color:#444;
+      font-size:22px;
+      line-height:2;
+      color:#333;
+      margin-top:30px;
     }
 
     /* =========================
        CALENDAR
     ========================== */
 
-    .calendar-wrapper{
-      max-width:700px;
-      margin:auto;
+    .calendar-section{
+      background:#f1f1f1;
       text-align:center;
     }
 
     .calendar{
-      margin-top:40px;
+      max-width:700px;
+      margin:50px auto 0;
+      background:white;
+      padding:40px;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .month{
+      font-size:50px;
+      margin-bottom:30px;
+    }
+
+    .days,
+    .dates{
       display:grid;
       grid-template-columns:repeat(7,1fr);
-      gap:15px;
+      gap:20px;
     }
 
-    .day-name{
-      font-weight:700;
-      color:#666;
+    .days div{
+      font-weight:600;
+      color:#444;
     }
 
-    .day{
-      height:70px;
+    .dates div{
+      font-size:28px;
+      padding:10px;
+      position:relative;
+    }
+
+    .heart{
+      background:black;
+      color:white;
+      width:60px;
+      height:60px;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-weight:500;
-      background:#f4f4f4;
-    }
-
-    .heart{
-      background:#111;
-      color:#fff;
-      position:relative;
-    }
-
-    .heart::after{
-      content:'❤';
-      position:absolute;
-      bottom:-10px;
-      font-size:14px;
+      margin:auto;
+      font-weight:bold;
     }
 
     /* =========================
@@ -281,122 +270,111 @@
     ========================== */
 
     .couple-image img{
+      max-width:900px;
+      margin:auto;
       border-radius:30px;
-      max-height:700px;
-      object-fit:cover;
     }
 
     /* =========================
-       SCHEDULE
+       PROGRAM SECTION
     ========================== */
 
-    .schedule{
-      background:#111;
-      color:#fff;
-    }
-
-    .schedule .section-title{
-      color:#fff;
+    .program{
+      background:white;
     }
 
     .timeline{
       max-width:900px;
-      margin:auto;
+      margin:70px auto 0;
       display:flex;
       flex-direction:column;
-      gap:25px;
+      gap:40px;
     }
 
     .timeline-item{
-      background:#1f1f1f;
+      display:flex;
+      align-items:center;
+      gap:25px;
       padding:25px;
+      border:1px solid #ddd;
       border-radius:20px;
-      transition:0.3s;
+      transition:0.4s;
+      background:#fafafa;
     }
 
     .timeline-item:hover{
       transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .icon{
+      font-size:45px;
+      min-width:70px;
+      text-align:center;
     }
 
     .timeline-item h3{
-      font-size:24px;
+      font-size:34px;
       margin-bottom:8px;
     }
 
     .timeline-item p{
-      color:#ccc;
+      color:#666;
+      line-height:1.7;
     }
 
     /* =========================
        MAP SECTION
     ========================== */
 
+    .maps{
+      background:#f5f5f5;
+    }
+
     .map-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:repeat(2,1fr);
       gap:40px;
+      margin-top:60px;
     }
 
     .map-card{
-      background:#fff;
+      background:white;
       border-radius:25px;
       overflow:hidden;
-      box-shadow:0 10px 40px rgba(0,0,0,0.08);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
       transition:0.4s;
     }
 
     .map-card:hover{
-      transform:translateY(-6px);
+      transform:translateY(-5px);
     }
 
     .map-card img{
-      height:320px;
+      height:300px;
       object-fit:cover;
     }
 
     .map-content{
-      padding:25px;
+      padding:30px;
     }
 
     .map-content h3{
-      font-size:28px;
-      margin-bottom:12px;
+      font-size:36px;
+      margin-bottom:15px;
     }
 
     .map-btn{
-      margin-top:20px;
       display:inline-block;
-      padding:12px 25px;
-      background:#111;
-      color:#fff;
-      border-radius:40px;
-      transition:0.3s;
+      margin-top:20px;
+      text-decoration:none;
+      color:white;
+      background:black;
+      padding:14px 28px;
+      border-radius:50px;
+      transition:0.4s;
     }
 
     .map-btn:hover{
-      background:#333;
+      background:#444;
     }
-
-    /* =========================
-       FOOTER
-    ========================== */
-
-    footer{
-      background:#111;
-      color:#fff;
-      text-align:center;
-      padding:40px 20px;
-    }
-
-    footer h2{
-      font-size:34px;
-      margin-bottom:10px;
-    }
-
-    footer p{
-      color:#bbb;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ============
