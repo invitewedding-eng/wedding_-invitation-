@@ -10,9 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Armenian:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* ----------------------------------------------------
-           1. ԲԱԶԱՅԻՆ ՈՃԵՐ (BASE STYLES)
-        ---------------------------------------------------- */
         * {
             margin: 0;
             padding: 0;
@@ -25,8 +22,8 @@
 
         body {
             font-family: 'Noto Sans Armenian', sans-serif;
-            background-color: #FAF6F0; /* Մեղմ, տաք կրեմագույն ֆոն */
-            color: #333333;
+            background-color: #FAF6F0;
+            color: #333;
             line-height: 1.8;
             text-align: center;
         }
@@ -39,8 +36,7 @@
 
         h1, h2, h3, .names {
             font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            color: #6E5343; /* Շագանակագույն/ոսկեգույն տեքստ */
+            color: #6E5343;
         }
 
         .section {
@@ -48,48 +44,36 @@
             border-bottom: 1px solid #EAE1D4;
         }
 
-        /* ----------------------------------------------------
-           2. ԳԼԽԱՎՈՐ ԲԱԺԻՆ (HERO SECTION)
-        ---------------------------------------------------- */
+        /* HERO */
         .hero {
-            /* Կարդում է main.jpg նկարը քո թղթապանակից */
-            background: linear-gradient(rgba(250, 246, 240, 0.3), rgba(250, 246, 240, 0.85)), 
-                        url('main.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(250,246,240,0.3), rgba(250,246,240,0.85)),
+            url('main.jpg') no-repeat center/cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
         }
 
         .hero-title {
             font-size: 1.1rem;
-            text-transform: uppercase;
             letter-spacing: 3px;
             color: #8A7365;
-            margin-bottom: 20px;
         }
 
         .names {
-            font-size: 3.8rem;
-            margin-bottom: 15px;
+            font-size: 3.5rem;
             font-style: italic;
         }
 
         .hero-date {
-            font-size: 1.3rem;
-            letter-spacing: 3px;
             margin-top: 20px;
             border-top: 1px solid #6E5343;
             border-bottom: 1px solid #6E5343;
             padding: 8px 30px;
-            display: inline-block;
         }
 
-        /* ----------------------------------------------------
-           3. ՀԵՏՀԱՇՎԱՐԿ (COUNTDOWN)
-        ---------------------------------------------------- */
+        /* COUNTDOWN */
         .countdown-container {
             display: flex;
             justify-content: center;
@@ -98,44 +82,26 @@
         }
 
         .countdown-box {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(5px);
+            background: rgba(255,255,255,0.85);
             padding: 15px 20px;
             border-radius: 12px;
-            min-width: 85px;
-            box-shadow: 0 4px 15px rgba(110, 83, 67, 0.08);
         }
 
         .countdown-number {
-            font-size: 2.2rem;
-            font-weight: 500;
+            font-size: 2rem;
             color: #6E5343;
-            display: block;
-            font-family: 'Playfair Display', serif;
         }
 
         .countdown-label {
             font-size: 0.8rem;
-            color: #888888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: #888;
         }
 
-        /* ----------------------------------------------------
-           4. ՊԱՏՄՈՒԹՅՈՒՆ ԵՎ ՊԱՏԿԵՐԱՍՐԱՀ (GALLERY)
-        ---------------------------------------------------- */
-        .story-text {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 25px auto 45px auto;
-            color: #555555;
-        }
-
+        /* GALLERY */
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            margin-top: 30px;
         }
 
         .gallery img {
@@ -143,99 +109,76 @@
             height: 350px;
             object-fit: cover;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .gallery img:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(110, 83, 67, 0.15);
-        }
-
-        /* ----------------------------------------------------
-           5. ՕՐՎԱ ԾՐԱԳԻՐ (TIMELINE)
-        ---------------------------------------------------- */
+        /* TIMELINE */
         .timeline {
-            position: relative;
             max-width: 500px;
-            margin: 50px auto 0 auto;
+            margin: auto;
         }
 
         .timeline-item {
-            margin-bottom: 50px;
-            position: relative;
-            text-align: left;
-            padding-left: 45px;
             border-left: 1px dashed #B8A69C;
+            padding-left: 40px;
+            margin-bottom: 40px;
+            position: relative;
         }
 
         .timeline-item::before {
-            content: '✨';
+            content: "✨";
             position: absolute;
-            left: -13px;
-            top: -2px;
-            background: #FAF6F0;
-            font-size: 1.1rem;
-            padding: 2px 0;
+            left: -12px;
         }
 
         .time {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #A37F6B;
-            margin-bottom: 5px;
-        }
-
-        .timeline-item h3 {
             font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: #4A3B32;
+            color: #A37F6B;
         }
 
-        .timeline-item p {
-            color: #666666;
-            font-size: 0.95rem;
-        }
-
-        /* ----------------------------------------------------
-           6. RSVP (ՀԱՍՏԱՏՈՒՄ)
-        ---------------------------------------------------- */
+        /* RSVP */
         .rsvp-form {
-            background: #FFFFFF;
-            padding: 45px 35px;
+            background: #fff;
+            padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 35px rgba(110, 83, 67, 0.06);
             max-width: 500px;
-            margin: 40px auto 0 auto;
+            margin: auto;
             text-align: left;
-            border: 1px solid #EAE1D4;
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: #4A3B32;
+            margin-bottom: 8px;
         }
 
-        .form-group input[type="text"], 
+        .form-group input,
         .form-group select {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             border: 1px solid #EAE1D4;
             border-radius: 8px;
-            background-color: #FAFAFA;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.3s;
         }
 
-        .form-group input:focus, 
+        /* FIXED PART */
+        .form-group input:focus,
         .form-group select:focus {
             outline: none;
+            border-color: #A37F6B;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-title">Հարսանեկան հրավիրատոմս</div>
+        <div class="names">Դավիթ & Հասմիկ</div>
+        <div class="hero-date">2026 • Օգոստոս</div>
+    </section>
+
+</body>
+</html>
